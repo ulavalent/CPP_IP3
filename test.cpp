@@ -1,5 +1,3 @@
-// FlyMovement class should allow an enemy to fly in a parabolic (arc-like) path, avoiding obstacles.
-
 #include "enemy_movement.h"
 #include <cassert>
 #include <iostream>
@@ -42,9 +40,9 @@ void testFlyMovement() {
     // Check if the enemy moves correctly
     // Horizontal movement
     flyStrategy.move(x, y, targetX, targetY);
-    assert(x == 2); // Should move by flySpeed = 2
-    assert(y == 0); // Y should remain unchanged in pure horizontal flight
-    assert(flyStrategy.getCurrentHeight() > 0); // Should have gained altitude
+    assert(x == 2);
+    assert(y == 0);
+    assert(flyStrategy.getCurrentHeight() > 0);
     
     // Further movement
     flyStrategy.move(x, y, targetX, targetY);
@@ -63,8 +61,8 @@ void testFlyMovement() {
         flyStrategy.move(x, y, targetX, targetY);
         
         // Ensure movement is in the correct direction
-        assert(x > oldX); // X should increase
-        assert(y > oldY); // Y should increase
+        assert(x > oldX);
+        assert(y > oldY);
         
         // Check if movement speed is correct
         double distance = sqrt(pow(x - oldX, 2) + pow(y - oldY, 2));

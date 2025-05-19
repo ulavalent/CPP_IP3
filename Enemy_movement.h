@@ -57,8 +57,8 @@ public:
     
     string getInfo() const;
     
-    int getX() const { return posX; }
-    int getY() const { return posY; }
+    int getX() const;
+    int getY() const;
     
     string getCurrentStrategy() const;
 

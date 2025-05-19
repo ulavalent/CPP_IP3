@@ -43,3 +43,11 @@ string Enemy::getInfo() const {
 string Enemy::getCurrentStrategy() const {
     return strategy->getName(); // polimorfizmas
 }
+
+int Enemy::getX() const {
+    return posX;
+}
+
+int Enemy::getY() const {
+    return posY;
+}
